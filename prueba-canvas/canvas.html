@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Dibujando con canvas</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="contenido">
+            <input type="color" id="color" name="color"/>
+            <input type="radio" id="circle" name="radioLinea" checked>
+            <input type="radio" id="square" name="radioLinea">
+            <input type="radio" id="pencil" name="radioLapizBorrador" checked>
+            <input type="radio" id="eraser" name="radioLapizBorrador">
+
+            <label for="color" class="tool-color">
+                <img src="images/color.png" >
+            </label>
+            <label for="pencil" class="tool-pencil" id="pencil">
+                <img src="images/lapiz.png"/>
+            </label>
+            <label for="eraser" class="tool-eraser" id="eraser">
+                <img src="images/borrador.png"/>
+            </label>
+            <label class="tool-diametro" >
+                <input type="range" id="diametro" value="10" min="1" max="200"/>
+            </label>
+            <label for="circle" class="tool-circle">
+                <img src="images/circulo.png"/>
+            </label>
+            <label for="square" class="tool-square">
+                <img src="images/cuadrado.png"/>
+            </label>
+            <a class="tool-download" id="download" download="canvas.png">
+                <button type="button" onclick="descargar()">
+                    <img src="images/guardar.png" id="save"/>
+                </button>
+            </a>
+            <label class="tool-trash" id="trash">
+                <img src="images/basura.png" id="borrarTodo" />
+            </label>
+            <canvas width="1200" height="500" id="canvas"></canvas>
+        </div>
+        <script src="dibujo-canvas.js"></script>
+        <footer>
+            <p>Fred Yegres 2022</p>
+        </footer>
+    </body>
+</html>
